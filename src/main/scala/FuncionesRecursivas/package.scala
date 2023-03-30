@@ -11,17 +11,13 @@ package object FuncionesRecursivas {
   }
 
   def maxIt(l:List[Int]):Int = {
-    def maxIt_aux(l:List[Int], max_value:Int):Int = {
-      if(l.isEmpty)
-        max_value
-      else
-        if(max_value > l.head){
-          maxIt_aux(l.tail, max_value)
-        }else{
-          maxIt_aux(l.tail, l.head)
-        }
+    var max_value = 0
+    for (x <- l) {
+      if (x > max_value) {
+        max_value = x
+      }
     }
-    maxIt_aux(l,0)
+    max_value
   }
 
   def movsTorresHanoi(n: BigInt): BigInt = {
