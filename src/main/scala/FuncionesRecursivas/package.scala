@@ -21,13 +21,13 @@ package object FuncionesRecursivas {
   }
 
   def movsTorresHanoi(n: BigInt): BigInt = {
-    def power_of_2(n:BigInt, result:BigInt):BigInt = {
+    def potencia_de_2(n:BigInt, resultado:BigInt):BigInt = {
       if(n == 0)
-        result
+        resultado
       else
-        power_of_2(n-1, result*2)
+        potencia_de_2(n-1, resultado*2)
     }
-    power_of_2(n, 1)-1
+    potencia_de_2(n, 1)-1
   }
 
   def torresHanoi(n: Int, t1: Int, t2: Int, t3: Int): List[(Int, Int)] = {
