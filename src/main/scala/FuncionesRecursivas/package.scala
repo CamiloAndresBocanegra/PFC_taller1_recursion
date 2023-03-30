@@ -24,8 +24,8 @@ package object FuncionesRecursivas {
     maxIt_aux(l,0)
   }
 
-  def movsTorresHanoi(n: Int): Int = {
-    def power_of_2(n:Int, result:Int):Int = {
+  def movsTorresHanoi(n: BigInt): BigInt = {
+    def power_of_2(n:BigInt, result:BigInt):BigInt = {
       if(n == 0)
         result
       else
